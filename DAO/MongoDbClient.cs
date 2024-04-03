@@ -20,7 +20,7 @@ namespace noeTaskManagerService.DAO
                 client = new MongoClient(_connectionString);
             } catch(Exception e)
             {
-                throw new Exception($"e", e);
+                throw new Exception($"{e}");
             }
 
         }

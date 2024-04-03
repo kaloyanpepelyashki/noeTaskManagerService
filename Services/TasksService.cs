@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using noeTaskManagerService.DAO;
 using noeTaskManagerService.Models;
 using noeTaskManagerService.Services.Interfaces;
@@ -13,7 +14,13 @@ namespace noeTaskManagerService.Services
         protected IMongoDatabase _database;
         protected IMongoCollection<TaskItem> _collection;
 
+        private TasksService()
+        {
+            _mongoDbDao = MongoDbClient.getInstance();
+            _database = _mongoDbDao.client.GetDatabase("TaskManager");
+            _collection = _database.GetCollection<TaskItem>("Tasks");
 
+        }
         public static TasksService getInstance()
         {
             if( _instance == null )
@@ -24,7 +31,38 @@ namespace noeTaskManagerService.Services
             return _instance;
         }
 
-        public Task<List<TaskItem>> getAllTasks();
+        //Gets all tasks from the database
+        public List<TaskItem> getAllTasks()
+        { 
+            try
+            {
+                var result = _collection.Find(new BsonDocument()).ToList();
+
+                if(result == null)
+                {
+                    return null;
+                } else
+                {
+                    return result;
+                }
+            } catch(Exception e)
+            {
+                throw new Exception($"{e}");
+            }
+        }
+
+        public async Task<bool> insertTaks(TaskItem task)
+        {
+            try
+            {
+                await _collection.InsertOneAsync(task);
+                return true;
+
+            } catch(Exception e)
+            {
+                throw new Exception($"{e}");
+            }
+        }
 
     }
 }
