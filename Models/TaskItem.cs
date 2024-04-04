@@ -3,29 +3,20 @@ using MongoDB.Bson;
 
 namespace noeTaskManagerService.Models
 {
-    public class TaskItem
+    public class TaskItem(string summary, string description, string priority, string dueDate)
     {
         [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public Object ObjectId { get; set; }
+        public ObjectId Id { get; set; }
         [BsonElement("taskKey")]
-        public string taskKey { get; init; }
+        public string TaskKey { get; init; } = Guid.NewGuid().ToString();
         [BsonElement("Summary")]
-        public string summary { get; set; }
+        public string Summary { get; set; } = summary;
         [BsonElement("Description")]
-        public string description { get; set; }
+        public string Description { get; set; } = description;
         [BsonElement("Priority")]
-        public string priority { get; set; }
+        public string Priority { get; set; } = priority;
         [BsonElement("DueDate")]
-        public DateOnly dueDate { get; set; }
-
-        public TaskItem(string summary, string description, string priority, DateOnly dueDate)
-        {   
-
-            this.summary = summary;
-            this.description = description;
-            this.priority = priority;
-            this.dueDate = dueDate;
-        }
+        public string DueDate { get; set; } = dueDate;
     }
 }

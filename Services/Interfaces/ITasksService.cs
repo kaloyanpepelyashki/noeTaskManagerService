@@ -4,7 +4,9 @@ namespace noeTaskManagerService.Services.Interfaces
 {
     public interface ITasksService
     {
-        Task<List<TaskItem>> getAllTasks();
-        Task<bool> insertTaks(TaskItem task);
+        
+        List<TaskItem> GetAllTasks();
+        Task<bool> InsertTaks(TaskItem task);
+        Task<bool> DeleteTaskByKey(string taskKey);
     }
 }

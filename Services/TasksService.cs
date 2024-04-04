@@ -21,7 +21,7 @@ namespace noeTaskManagerService.Services
             _collection = _database.GetCollection<TaskItem>("Tasks");
 
         }
-        public static TasksService getInstance()
+        public static TasksService GetInstance()
         {
             if( _instance == null )
             {
@@ -32,7 +32,7 @@ namespace noeTaskManagerService.Services
         }
 
         //Gets all tasks from the database
-        public List<TaskItem> getAllTasks()
+        public List<TaskItem>? GetAllTasks()
         { 
             try
             {
@@ -41,6 +41,7 @@ namespace noeTaskManagerService.Services
                 if(result == null)
                 {
                     return null;
+
                 } else
                 {
                     return result;
@@ -51,12 +52,35 @@ namespace noeTaskManagerService.Services
             }
         }
 
-        public async Task<bool> insertTaks(TaskItem task)
+        public async Task<bool> InsertTaks(TaskItem task)
         {
             try
             {
                 await _collection.InsertOneAsync(task);
                 return true;
+
+            } catch(Exception e)
+            {
+                throw new Exception($"{e}");
+            }
+        }
+
+        public async Task<bool> DeleteTaskByKey(string taskKey)
+        {
+            try
+            {
+                var filter = Builders<TaskItem>.Filter.Eq("taskKey", taskKey);
+                var checkValidity = _collection.Find(filter).First();
+
+                if(checkValidity != null)
+                {
+                    await _collection.DeleteOneAsync(filter);
+                    return true;
+
+                } else
+                {
+                    throw new Exception($"No item with key {taskKey} in database");
+                }
 
             } catch(Exception e)
             {

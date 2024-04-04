@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mzNd7EolG6Sxt6vTtltCzwv/KwXuSo2o8vt+mpx2oiU=",
+  "Source": "noeTaskManagerService",
+  "BasePath": "_content/noeTaskManagerService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

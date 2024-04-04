@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.CreateTask",
+    "Method": "Create",
+    "RelativePath": "api/CreateTask",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTask",
+        "Type": "noeTaskManagerService.Controllers.CreateTask\u002BNewTask",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.GetTask",
+    "Method": "All",
+    "RelativePath": "api/GetTask/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
