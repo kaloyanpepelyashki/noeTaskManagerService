@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:controllers\\mutatetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\controllers\\createtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:controllers\\createtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\services\\tasksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:services\\tasksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\services\\interfaces\\itasksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:services\\interfaces\\itasksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:controllers\\gettask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\dao\\mongodbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:dao\\mongodbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\controllers\\createtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:controllers\\createtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -50,13 +42,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "GetTask.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Controllers\\GetTask.cs",
               "RelativeDocumentMoniker": "Controllers\\GetTask.cs",
               "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Controllers\\GetTask.cs",
               "RelativeToolTip": "Controllers\\GetTask.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T10:58:28.625Z",
               "IsPinned": true,
@@ -70,14 +62,14 @@
               "RelativeDocumentMoniker": "Controllers\\MutateTask.cs",
               "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Controllers\\MutateTask.cs",
               "RelativeToolTip": "Controllers\\MutateTask.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAWAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAAHAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T15:27:42.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "CreateTask.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Controllers\\CreateTask.cs",
               "RelativeDocumentMoniker": "Controllers\\CreateTask.cs",
@@ -85,12 +77,11 @@
               "RelativeToolTip": "Controllers\\CreateTask.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T11:23:46.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T11:23:46.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -102,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -114,54 +105,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "TaskItem.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Models\\TaskItem.cs",
               "RelativeDocumentMoniker": "Models\\TaskItem.cs",
               "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Models\\TaskItem.cs",
               "RelativeToolTip": "Models\\TaskItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T14:01:32.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ITasksService.cs",
-              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Services\\Interfaces\\ITasksService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\ITasksService.cs",
-              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Services\\Interfaces\\ITasksService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\ITasksService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T14:00:32.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TasksService.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Services\\TasksService.cs",
               "RelativeDocumentMoniker": "Services\\TasksService.cs",
               "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\Services\\TasksService.cs",
               "RelativeToolTip": "Services\\TasksService.cs",
-              "ViewState": "AQIAAKsAAAAAAAAAAAAAAHIAAAAJAAAA",
+              "ViewState": "AQIAALwAAAAAAAAAAAAAANcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T13:49:01.463Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MongoDbClient.cs",
-              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\DAO\\MongoDbClient.cs",
-              "RelativeDocumentMoniker": "DAO\\MongoDbClient.cs",
-              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\DAO\\MongoDbClient.cs",
-              "RelativeToolTip": "DAO\\MongoDbClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:31:19.413Z"
             }
           ]
         }

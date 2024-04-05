@@ -24,5 +24,21 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
+    "Method": "PatchBySummary",
+    "RelativePath": "bySummary",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mutatorRequest",
+        "Type": "noeTaskManagerService.Controllers.MutateTask\u002BMutatorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

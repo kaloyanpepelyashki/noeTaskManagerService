@@ -3,6 +3,7 @@ using MongoDB.Driver;
 using noeTaskManagerService.DAO;
 using noeTaskManagerService.Models;
 using noeTaskManagerService.Services.Interfaces;
+using System.Reflection.Metadata;
 
 namespace noeTaskManagerService.Services
 {
@@ -111,16 +112,19 @@ namespace noeTaskManagerService.Services
             }
         }
 
-        public async Task<bool>? UpdateTaskSummary(string taskToUpdateKey, string newSummary)
+        public async Task<bool> UpdateTaskSummary(string taskToUpdateKey, string newSummary)
         {
             try
             {
+                ArgumentNullException.ThrowIfNull(taskToUpdateKey, nameof(taskToUpdateKey));
+                ArgumentNullException.ThrowIfNull(newSummary, nameof(newSummary));
+
                 var filter = Builders<TaskItem>.Filter.Eq("taskKey", taskToUpdateKey);
                 var checkValidity = _collection.Find(filter).First();
 
                 if (checkValidity != null)
                 {
-                    var patch = Builders<TaskItem>.Update.Set("summary", newSummary);
+                    var patch = Builders<TaskItem>.Update.Set("Summary", newSummary);
                     var updateResult = await _collection.UpdateOneAsync(filter, patch);
 
                     return updateResult.IsAcknowledged;
@@ -136,23 +140,26 @@ namespace noeTaskManagerService.Services
             }
         }
 
-        public async Task<bool>? UpdateTaskDescription(string taskToUpdateKey, string newDescription)
+        public async Task<bool> UpdateTaskDescription(string taskToUpdateKey, string newDescription)
         {
             try
             {
+                ArgumentNullException.ThrowIfNull(taskToUpdateKey, nameof(taskToUpdateKey));
+                ArgumentNullException.ThrowIfNull(newDescription, nameof(newDescription));
+
                 var filter = Builders<TaskItem>.Filter.Eq("taskKey", taskToUpdateKey);
                 var checkValidity = _collection.Find(filter).First();
 
                 if (checkValidity != null)
                 {
-                    var patch = Builders<TaskItem>.Update.Set("description", newDescription);
+                    var patch = Builders<TaskItem>.Update.Set("Description", newDescription);
                     var updateResult = await _collection.UpdateOneAsync(filter, patch);
 
                     return updateResult.IsAcknowledged;
                 }
                 else
                 {
-                    throw new Exception("No item with key {taskToUpdateKey} in database");
+                    throw new Exception($"No item with key {taskToUpdateKey} in database");
                 }
 
             }
@@ -162,23 +169,26 @@ namespace noeTaskManagerService.Services
             }
         }
 
-        public async Task<bool>? UpdateTaskPriority(string taskToUpdateKey, string newPriority)
+        public async Task<bool> UpdateTaskPriority(string taskToUpdateKey, string newPriority)
         {
             try
             {
+                ArgumentNullException.ThrowIfNull(taskToUpdateKey, nameof(taskToUpdateKey));
+                ArgumentNullException.ThrowIfNull(newPriority, nameof(newPriority));
+
                 var filter = Builders<TaskItem>.Filter.Eq("taskKey", taskToUpdateKey);
                 var checkValidity = _collection.Find(filter).First();
 
                 if (checkValidity != null)
                 {
-                    var patch = Builders<TaskItem>.Update.Set("priority", newPriority);
+                    var patch = Builders<TaskItem>.Update.Set("Priority", newPriority);
                     var updateResult = await _collection.UpdateOneAsync(filter, patch);
 
                     return updateResult.IsAcknowledged;
                 }
                 else
                 {
-                    throw new Exception("No item with key {taskToUpdateKey} in database");
+                    throw new Exception($"No item with key {taskToUpdateKey} in database");
                 }
             }
             catch (Exception e)
@@ -186,29 +196,38 @@ namespace noeTaskManagerService.Services
                 throw new Exception($"{e}");
             }
         }
-        public async Task<bool>? UpdateTaskDueDate(string taskToUpdateKey, string newDueDate)
+        public async Task<bool> UpdateTaskDueDate(string taskToUpdateKey, string newDueDate)
         {
             try
             {
+                
+                ArgumentNullException.ThrowIfNull(taskToUpdateKey, nameof(taskToUpdateKey));
+                ArgumentNullException.ThrowIfNull(newDueDate, nameof(newDueDate));
+
                 var filter = Builders<TaskItem>.Filter.Eq("taskKey", taskToUpdateKey);
                 var checkValidity = _collection.Find(filter).First();
 
                 if (checkValidity != null)
                 {
-                    var patch = Builders<TaskItem>.Update.Set("dueDate", newDueDate);
+                    var patch = Builders<TaskItem>.Update.Set("DueDate", newDueDate);
                     var updateResult = await _collection.UpdateOneAsync(filter, patch);
 
                     return updateResult.IsAcknowledged;
                 }
                 else
                 {
-                    throw new Exception("No item with key {taskToUpdateKey} in database");
+                    throw new KeyNotFoundException($"No item with key {taskToUpdateKey} in database");
                 }
+            }
+            catch (MongoException e)
+            {
+                throw new MongoException("Could not update record in the database. Database error", e);
             }
             catch (Exception e)
             {
                 throw new Exception($"{e}");
             }
+
         }
 
     }
