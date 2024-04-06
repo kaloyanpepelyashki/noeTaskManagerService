@@ -9,7 +9,7 @@ namespace noeTaskManagerService.Controllers
     [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
-    public class CreateTask : Controller
+    public class CreateTask : ControllerBase
     {
         private readonly ITasksService _tasksService;
 

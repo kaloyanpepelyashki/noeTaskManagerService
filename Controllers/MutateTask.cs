@@ -9,7 +9,7 @@ namespace noeTaskManagerService.Controllers
     [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
-    public class MutateTask : Controller
+    public class MutateTask : ControllerBase
     {
         private readonly ITasksService _tasksSevice;
 
@@ -23,12 +23,12 @@ namespace noeTaskManagerService.Controllers
         {
             try
             {
-                if(String.IsNullOrEmpty(mutatorRequest.targetKey) || String.IsNullOrWhiteSpace(mutatorRequest.mutationValue))
+                if(String.IsNullOrEmpty(mutatorRequest.TargetKey) || String.IsNullOrWhiteSpace(mutatorRequest.MutationValue))
                 {
                     return StatusCode(400, "Empty input was provided for one or more parameters");
                 }
 
-                var result = await _tasksSevice.UpdateTaskSummary(mutatorRequest.targetKey, mutatorRequest.mutationValue);
+                var result = await _tasksSevice.UpdateTaskSummary(mutatorRequest.TargetKey, mutatorRequest.MutationValue);
                 if(result)
                 {
                     return Ok("Task updated");
@@ -47,12 +47,12 @@ namespace noeTaskManagerService.Controllers
         {
             try
             {
-                if (String.IsNullOrEmpty(mutatorRequest.targetKey) || String.IsNullOrWhiteSpace(mutatorRequest.mutationValue))
+                if (String.IsNullOrEmpty(mutatorRequest.TargetKey) || String.IsNullOrWhiteSpace(mutatorRequest.MutationValue))
                 {
                     return StatusCode(400, "Empty input was provided for one or more parameters");
                 }
 
-                var result = await _tasksSevice.UpdateTaskDescription(mutatorRequest.targetKey, mutatorRequest.mutationValue);
+                var result = await _tasksSevice.UpdateTaskDescription(mutatorRequest.TargetKey, mutatorRequest.MutationValue);
                 if (result)
                 {
                     return Ok("Task updated");
@@ -73,12 +73,12 @@ namespace noeTaskManagerService.Controllers
         {
             try
             {
-                if (String.IsNullOrEmpty(mutatorRequest.targetKey) || String.IsNullOrWhiteSpace(mutatorRequest.mutationValue))
+                if (String.IsNullOrEmpty(mutatorRequest.TargetKey) || String.IsNullOrWhiteSpace(mutatorRequest.MutationValue))
                 {
                     return StatusCode(400, "Empty input was provided for one or more parameters");
                 }
 
-                var result = await _tasksSevice.UpdateTaskPriority(mutatorRequest.targetKey, mutatorRequest.mutationValue);
+                var result = await _tasksSevice.UpdateTaskPriority(mutatorRequest.TargetKey, mutatorRequest.MutationValue);
                 if (result)
                 {
                     return Ok("Task updated");
@@ -99,12 +99,12 @@ namespace noeTaskManagerService.Controllers
         {
             try
             {
-                if (String.IsNullOrEmpty(mutatorRequest.targetKey) || String.IsNullOrWhiteSpace(mutatorRequest.mutationValue))
+                if (String.IsNullOrEmpty(mutatorRequest.TargetKey) || String.IsNullOrWhiteSpace(mutatorRequest.MutationValue))
                 {
                     return StatusCode(400, "Empty input was provided for one or more parameters");
                 }
 
-                var result = await _tasksSevice.UpdateTaskDueDate(mutatorRequest.targetKey, mutatorRequest.mutationValue);
+                var result = await _tasksSevice.UpdateTaskDueDate(mutatorRequest.TargetKey, mutatorRequest.MutationValue);
                 if (result)
                 {
                     return Ok("Task updated");
@@ -124,9 +124,9 @@ namespace noeTaskManagerService.Controllers
         public class MutatorRequest
         {
             [Required]
-            public string targetKey { get; set; }
+            public string TargetKey { get; set; }
             [Required]
-            public string mutationValue { get; set; }
+            public string MutationValue { get; set; }
 
         }
 
