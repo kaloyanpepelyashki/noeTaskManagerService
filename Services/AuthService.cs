@@ -15,7 +15,7 @@ namespace noeTaskManagerService.Services
         protected AuthService()
         {
             _mongoDbDao = MongoDbClient.getInstance();
-            _database = _mongoDbDao.client.GetDatabase("Users");
+            _database = _mongoDbDao.client.GetDatabase("UsersDB");
             _collection = _database.GetCollection<User>("UsersAccounts");
         }
 
@@ -46,23 +46,34 @@ namespace noeTaskManagerService.Services
             }
         }
 
-        public async Task<User?> SignIn(string email, string hashedPassword)
+        public async Task<User?> SignIn(string email, string password)
         {
             try
-            {
+            {   
                 var filterBuilder = Builders<User>.Filter;
-                var filter = filterBuilder.Eq("email", email) & filterBuilder.Eq("password", hashedPassword);
+                var filter = filterBuilder.Eq("email", email);
 
+                //Checks if the email exists in the database
                 var result = await _collection.Find(filter).FirstOrDefaultAsync();
 
                 if (result != null)
                 {
+                    var storedHashedPassword = result.HashedPassword;
+                    //Verifies the password matches the stored in the DB password
+                    var passwordVerification = PasswordEncryptor.VerifyPassword(password, storedHashedPassword);
+
+                    if (!passwordVerification)
+                    {
+                        //Throws an exception in case the passwords don't mathc
+                        throw new AuthException("Wrong email or password");
+                    }
+
                     var user = new User(result.FirstName, result.LastName, result.Email, result.HashedPassword, result.UserUKey);
                     return user;
 
                 } else
                 {
-                    return null;
+                    throw new AuthException("Wrong email or password");
                 }
 
             } catch(Exception e)
@@ -70,12 +81,15 @@ namespace noeTaskManagerService.Services
                 throw new Exception($"{e}");
             }
         }
-
+        /* 
+         * This is the SignUp method, that takes in all parameters needed to create a user in the database.
+         */
         public async Task<User?> SignUp(string firstName, string lastName, string email, string hashedPassword)
         {
             try
             {
                 var filter = Builders<User>.Filter.Eq("email", email);
+                //Checks if the email already exists in the database
                 var emailExists = await _collection.Find(filter).FirstOrDefaultAsync();
 
                 if(emailExists != null)
@@ -86,10 +100,12 @@ namespace noeTaskManagerService.Services
                 var newUser = new User(firstName, lastName, email, hashedPassword);
                 await _collection.InsertOneAsync(newUser);
 
+                //Tryes to find the newly created profile of the user in the database
                 var userProfile = await FindUser(email);
 
                 if (userProfile != null)
                 {
+                    //If the newly created profile is not found, the application assummes there was a problem creating it and throws an exception
                     throw new AuthException("Error creating user profile");
                 }
 
@@ -102,6 +118,7 @@ namespace noeTaskManagerService.Services
         }
     }
 
+    //The auth exception class, which is a custom exception class, for throwing exceptions related to authentication
     public class AuthException : Exception
     {
         public AuthException(string message) : base(message)

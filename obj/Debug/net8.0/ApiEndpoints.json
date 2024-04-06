@@ -27,8 +27,88 @@
   },
   {
     "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
+    "Method": "PatchByDescription",
+    "RelativePath": "description",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mutatorRequest",
+        "Type": "noeTaskManagerService.Controllers.MutateTask\u002BMutatorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
+    "Method": "PatchByDueDate",
+    "RelativePath": "dueDate",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mutatorRequest",
+        "Type": "noeTaskManagerService.Controllers.MutateTask\u002BMutatorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
+    "Method": "PatchByPriority",
+    "RelativePath": "priority",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mutatorRequest",
+        "Type": "noeTaskManagerService.Controllers.MutateTask\u002BMutatorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.AuthController",
+    "Method": "SignIn",
+    "RelativePath": "signin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCred",
+        "Type": "noeTaskManagerService.Controllers.AuthController\u002BSignInObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.AuthController",
+    "Method": "SignUp",
+    "RelativePath": "signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCred",
+        "Type": "noeTaskManagerService.Controllers.AuthController\u002BSignUpObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
     "Method": "PatchBySummary",
-    "RelativePath": "bySummary",
+    "RelativePath": "summary",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,

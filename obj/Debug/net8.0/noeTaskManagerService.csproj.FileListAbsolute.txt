@@ -44,3 +44,4 @@ C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\noeTaskManagerSe
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\noeTaskManagerService\obj\Debug\net8.0\noeTaskManagerService.pdb
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\noeTaskManagerService\obj\Debug\net8.0\noeTaskManagerService.genruntimeconfig.cache
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\noeTaskManagerService\obj\Debug\net8.0\ref\noeTaskManagerService.dll
+C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\noeTaskManagerService\bin\Debug\net8.0\BCrypt.Net-Next.dll
