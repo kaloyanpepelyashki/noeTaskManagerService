@@ -22,19 +22,19 @@ namespace noeTaskManagerService.Services
             JwtSecurityKey = _configuration.GetValue<string>("JWT:SecretKey");
         }
 
-        private string GenerateJWTToken(SignInObject authDto)
+        public string GenerateJWTToken(SignInObject userDto)
         {
             try
             {
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtSecurityKey));
                 var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-                var claims = new[]
-                {
-                    new Claim(JwtRegisteredClaimNames.Sub, authDto.Email),
-                    new Claim("CustomClaim", "CustomValue"),
+                List<Claim> claims =
+                [
+                    new Claim(JwtRegisteredClaimNames.Sub, userDto.Email),
+                    new Claim("email", userDto.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                };
+                ];
 
                 var token = new JwtSecurityToken(
                     issuer: JwtIssuer,

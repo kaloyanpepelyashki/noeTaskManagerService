@@ -13,10 +13,12 @@ namespace noeTaskManagerService.Controllers
     public class AuthController : ControllerBase
     {
         protected readonly AuthService _authService;
+        protected readonly JWTGenerator _jwtGenerator;
 
         public AuthController()
         {
             _authService = AuthService.GetInstance();
+            _jwtGenerator = new JWTGenerator();
         }
 
         [HttpPost("/signin")]
@@ -33,7 +35,9 @@ namespace noeTaskManagerService.Controllers
                 }
 
                 var user = new SuccessReturnObject(result.FirstName, result.LastName, result.Email, result.UserUKey);
-                return Ok(user);
+                var jwt = _jwtGenerator.GenerateJWTToken(userCred);
+
+                return Ok(new { access_token = jwt, user_cred = user });
 
             } catch(AuthException e)
             {
@@ -44,6 +48,7 @@ namespace noeTaskManagerService.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
         [HttpPost("/signup")]
         public async Task<IActionResult> SignUp([FromBody] SignUpObject userCred)
         {

@@ -83,7 +83,7 @@
     "Parameters": [
       {
         "Name": "userCred",
-        "Type": "noeTaskManagerService.Controllers.AuthController\u002BSignInObject",
+        "Type": "noeTaskManagerService.Models.Auth.SignInObject",
         "IsRequired": true
       }
     ],
@@ -99,7 +99,7 @@
     "Parameters": [
       {
         "Name": "userCred",
-        "Type": "noeTaskManagerService.Controllers.AuthController\u002BSignUpObject",
+        "Type": "noeTaskManagerService.Models.Auth.SignUpObject",
         "IsRequired": true
       }
     ],
