@@ -5,7 +5,7 @@ namespace noeTaskManagerService.Services
     {
         public static string HashPassword(string password)
         {
-            return BCr.BCrypt.HashPassword("Password123!");
+            return BCr.BCrypt.HashPassword(password);
         }
 
         public static bool VerifyPassword(string password, string hashedPassword)

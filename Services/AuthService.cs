@@ -45,7 +45,9 @@ namespace noeTaskManagerService.Services
                 throw new Exception($"{e}");
             }
         }
-
+        /* 
+        * This is the SignUp method, that takes in email and password parameters to sign user in.
+        */
         public async Task<User?> SignIn(string email, string password)
         {
             try
@@ -103,7 +105,7 @@ namespace noeTaskManagerService.Services
                 //Tryes to find the newly created profile of the user in the database
                 var userProfile = await FindUser(email);
 
-                if (userProfile != null)
+                if (userProfile == null)
                 {
                     //If the newly created profile is not found, the application assummes there was a problem creating it and throws an exception
                     throw new AuthException("Error creating user profile");
