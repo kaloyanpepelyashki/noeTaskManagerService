@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jYKpYE0e9aCInxPd8RNt9JmKtgxtMQ9m4HsLDouZuh26heYtPPcHYlLJmVX/LE5icSrOPNlBpKd53Sao4WStTg==",
+  "dgSpecHash": "9OtjoI/QACR5sS/Puu1s687t5jipNHeIKSYmO/ovFHgM2RQfMUpjRGd+BXq4vxR3TDIJIcLvkDimkHenJgCrTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.csproj",
+  "projectFilePath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\noeTaskManagerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaloyan\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

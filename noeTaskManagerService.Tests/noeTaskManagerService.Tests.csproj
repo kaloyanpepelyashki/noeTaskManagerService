@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\noeTaskManagerService\noeTaskManagerService.csproj" />
+    <ProjectReference Include="..\noeTaskManagerService.Primary\noeTaskManagerService.csproj" />
   </ItemGroup>
 
   <ItemGroup>
