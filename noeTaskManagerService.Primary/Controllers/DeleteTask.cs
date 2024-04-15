@@ -14,12 +14,12 @@ namespace noeTaskManagerService.Controllers
             _tasksService = TasksService.GetInstance();
         }
 
-        [HttpDelete("deleteByKey")]
-        public async Task<IActionResult> DeleteATask([FromBody] DeleteRequest deleteRequest)
+        [HttpDelete("deleteByKey/{taskKey}")]
+        public async Task<IActionResult> DeleteATask(string taskKey)
         {
             try
             {
-                var response = await _tasksService.DeleteTaskByKey(deleteRequest.TaskKey);
+                var response = await _tasksService.DeleteTaskByKey(taskKey);
 
                 if(response)
                 {
@@ -33,13 +33,6 @@ namespace noeTaskManagerService.Controllers
             {
                 return StatusCode(500, e.Message);
             }
-        }
-
-
-        public class DeleteRequest
-        {
-            [Required]
-            public string TaskKey { get; set; }
         }
     }
 }
