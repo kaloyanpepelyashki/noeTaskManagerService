@@ -15,6 +15,7 @@ namespace noeTaskManagerService.DAO
         {
             try
             {
+
                 _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddEnvironmentVariables().Build();
                 _connectionString = _configuration.GetValue<string>("MongoDB:DBConnectionString");
 

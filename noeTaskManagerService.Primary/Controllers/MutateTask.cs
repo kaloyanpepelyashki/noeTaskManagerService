@@ -18,7 +18,7 @@ namespace noeTaskManagerService.Controllers
             _tasksSevice = TasksService.GetInstance();
         }
 
-        [HttpPatch("/summary")]
+        [HttpPatch("summary")]
         public async Task<IActionResult> PatchBySummary([FromBody] MutatorRequest mutatorRequest)
         {
             try
@@ -42,7 +42,7 @@ namespace noeTaskManagerService.Controllers
             }
         }
 
-        [HttpPatch("/description")]
+        [HttpPatch("description")]
         public async Task<IActionResult> PatchByDescription([FromBody] MutatorRequest mutatorRequest)
         {
             try
@@ -68,7 +68,7 @@ namespace noeTaskManagerService.Controllers
             }
         }
 
-        [HttpPatch("/priority")]
+        [HttpPatch("priority")]
         public async Task<IActionResult> PatchByPriority([FromBody] MutatorRequest mutatorRequest)
         {
             try
@@ -94,7 +94,7 @@ namespace noeTaskManagerService.Controllers
             }
         }
 
-        [HttpPatch("/dueDate")]
+        [HttpPatch("dueDate")]
         public async Task<IActionResult> PatchByDueDate([FromBody] MutatorRequest mutatorRequest)
         {
             try

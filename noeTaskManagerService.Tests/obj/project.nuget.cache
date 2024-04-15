@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6KGDwBdFcfv0R+z1YiYOpplv1I6o9521yGm0A7uMcOJ7x5/qhdOaGZzQNhYECP5gip5oHCuZ5YFuhfwO5cwP0w==",
+  "dgSpecHash": "fpZo1EWMaqyleUQ0ag8DzJ+NENMMXILXpL0vnwBC0hjXSWEeLZVBEMLiPPH67zmWgZWkzijiElAbcOAxAtqUHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Tests\\noeTaskManagerService.Tests.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.testplatform.testhost\\17.8.0\\microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\mongodb.bson\\2.24.0\\mongodb.bson.2.24.0.nupkg.sha512",

@@ -21,7 +21,7 @@ namespace noeTaskManagerService.Controllers
             _jwtGenerator = new JWTGenerator();
         }
 
-        [HttpPost("/signin")]
+        [HttpPost("signin")]
         /*This method will try to authenticate the user and will return an object with an access token and the user object */
         public async Task<IActionResult> SignIn([FromBody] SignInObject userCred)
         {
@@ -52,7 +52,7 @@ namespace noeTaskManagerService.Controllers
             }
         }
 
-        [HttpPost("/signup")]
+        [HttpPost("signup")]
         /*This method will try to create a new user profile in the database and will return the user object on success */
         public async Task<IActionResult> SignUp([FromBody] SignUpObject userCred)
         {

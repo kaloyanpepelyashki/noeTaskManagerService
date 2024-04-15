@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9OtjoI/QACR5sS/Puu1s687t5jipNHeIKSYmO/ovFHgM2RQfMUpjRGd+BXq4vxR3TDIJIcLvkDimkHenJgCrTQ==",
+  "dgSpecHash": "W+8Gdaip3jZvACuJp7cXe/Itvo/sRDsNpH5aZFyyfs9CETqVGod0dudqkTx9otDuVL50JegzJtuhmJ5tqQ9G6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\noeTaskManagerService.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\mongodb.bson\\2.24.0\\mongodb.bson.2.24.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\mongodb.driver\\2.24.0\\mongodb.driver.2.24.0.nupkg.sha512",

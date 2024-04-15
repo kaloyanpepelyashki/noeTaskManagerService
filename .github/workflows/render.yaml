@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: noeTaskManagerService
+    env: dotnet
+    buildCommand: dotnet build -c Release
+    startCommand: dotnet ./bin/Release/net8/noeTaskManagerService.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: production
