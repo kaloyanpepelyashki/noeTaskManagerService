@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using noeTaskManagerService.Services;
 using noeTaskManagerService.Services.Interfaces;
+using System.ComponentModel.DataAnnotations;
 
 namespace noeTaskManagerService.Controllers
 {
@@ -14,11 +15,11 @@ namespace noeTaskManagerService.Controllers
         }
 
         [HttpDelete("deleteByKey")]
-        public async Task<IActionResult> DeleteATask([FromBody] string taskKey)
+        public async Task<IActionResult> DeleteATask([FromBody] DeleteRequest deleteRequest)
         {
             try
             {
-                var response = await _tasksService.DeleteTaskByKey(taskKey);
+                var response = await _tasksService.DeleteTaskByKey(deleteRequest.TaskKey);
 
                 if(response)
                 {
@@ -32,6 +33,13 @@ namespace noeTaskManagerService.Controllers
             {
                 return StatusCode(500, e.Message);
             }
+        }
+
+
+        public class DeleteRequest
+        {
+            [Required]
+            public string TaskKey { get; set; }
         }
     }
 }

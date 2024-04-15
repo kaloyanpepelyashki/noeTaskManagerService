@@ -19,7 +19,7 @@ namespace noeTaskManagerService.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] NewTask newTask)
+        public async Task<IActionResult> Create([FromBody] CreateTasksRequest newTask)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace noeTaskManagerService.Controllers
             }
         }
 
-        public class NewTask
+        public class CreateTasksRequest
         {
             public string summary { get; set; }
             public string description { get; set; }
