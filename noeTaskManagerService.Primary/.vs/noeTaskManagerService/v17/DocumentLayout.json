@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\noetaskmanagerservice.primary\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\noetaskmanagerservice.primary\\dao\\mongodbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:dao\\mongodbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\noetaskmanagerservice.primary\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\noetaskmanagerservice\\noetaskmanagerservice.primary\\controllers\\deletetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{597126BF-534F-4F7F-A05B-05C7AE95E1D0}|noeTaskManagerService.csproj|solutionrelative:controllers\\deletetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -42,24 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-04-17T12:37:36.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -67,12 +67,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T11:59:17.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T11:59:17.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CreateTask.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\Controllers\\CreateTask.cs",
               "RelativeDocumentMoniker": "Controllers\\CreateTask.cs",
@@ -80,12 +79,11 @@
               "RelativeToolTip": "Controllers\\CreateTask.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T13:16:59.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T13:16:59.962Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MutateTask.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\Controllers\\MutateTask.cs",
               "RelativeDocumentMoniker": "Controllers\\MutateTask.cs",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Controllers\\MutateTask.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T13:03:13.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T13:03:13.185Z"
             },
             {
               "$type": "Document",
@@ -110,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -118,12 +115,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AQIAAEkAAAAAAAAAAAAAADsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T16:26:57.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T16:26:57.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -131,12 +127,11 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-13T16:16:26.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-13T16:16:26.103Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MongoDbClient.cs",
               "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\noeTaskManagerService\\noeTaskManagerService.Primary\\DAO\\MongoDbClient.cs",
               "RelativeDocumentMoniker": "DAO\\MongoDbClient.cs",
