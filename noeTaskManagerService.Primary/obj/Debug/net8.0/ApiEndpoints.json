@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "noeTaskManagerService.Controllers.AuthController",
+    "Method": "SignIn",
+    "RelativePath": "api/Auth/signin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCred",
+        "Type": "noeTaskManagerService.Models.Auth.SignInObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.AuthController",
+    "Method": "SignUp",
+    "RelativePath": "api/Auth/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCred",
+        "Type": "noeTaskManagerService.Models.Auth.SignUpObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "noeTaskManagerService.Controllers.CreateTask",
     "Method": "Create",
     "RelativePath": "api/CreateTask",
@@ -9,7 +41,23 @@
     "Parameters": [
       {
         "Name": "newTask",
-        "Type": "noeTaskManagerService.Controllers.CreateTask\u002BNewTask",
+        "Type": "noeTaskManagerService.Controllers.CreateTask\u002BCreateTasksRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "noeTaskManagerService.Controllers.DeleteTask",
+    "Method": "DeleteATask",
+    "RelativePath": "api/DeleteTask/deleteByKey/{taskKey}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskKey",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -28,7 +76,7 @@
   {
     "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
     "Method": "PatchByDescription",
-    "RelativePath": "description",
+    "RelativePath": "api/MutateTask/description",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -44,7 +92,7 @@
   {
     "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
     "Method": "PatchByDueDate",
-    "RelativePath": "dueDate",
+    "RelativePath": "api/MutateTask/dueDate",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -60,7 +108,7 @@
   {
     "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
     "Method": "PatchByPriority",
-    "RelativePath": "priority",
+    "RelativePath": "api/MutateTask/priority",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -74,41 +122,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "noeTaskManagerService.Controllers.AuthController",
-    "Method": "SignIn",
-    "RelativePath": "signin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userCred",
-        "Type": "noeTaskManagerService.Models.Auth.SignInObject",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "noeTaskManagerService.Controllers.AuthController",
-    "Method": "SignUp",
-    "RelativePath": "signup",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userCred",
-        "Type": "noeTaskManagerService.Models.Auth.SignUpObject",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "noeTaskManagerService.Controllers.MutateTask",
     "Method": "PatchBySummary",
-    "RelativePath": "summary",
+    "RelativePath": "api/MutateTask/summary",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,

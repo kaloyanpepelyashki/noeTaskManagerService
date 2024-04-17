@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("noeTaskManagerService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d5720f4637cf6b4acf6ce9dd0bf228f8e497db8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f96ca083155681e41d1be5bd6bfbb902765982e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("noeTaskManagerService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("noeTaskManagerService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

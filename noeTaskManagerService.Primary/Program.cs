@@ -6,12 +6,15 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 
-IConfiguration _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddEnvironmentVariables().Build();
+IConfiguration _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).AddEnvironmentVariables().Build();
 
 //Get env variables from appsettings.json needed for the registration of the JWT service
-string JwtIssuer = _configuration.GetValue<string>("JWT:Issuer");
-string JwtAudience = _configuration.GetValue<string>("JWT:Audience");
-string JwtSecurityKey = _configuration.GetValue<string>("JWT:SecretKey");
+//string JwtIssuer = _configuration.GetValue<string>("JWT:Issuer");
+string JwtIssuer = _configuration["JWT:Issuer"];
+//string JwtAudience = _configuration.GetValue<string>("JWT:Audience");
+string JwtAudience = _configuration["JWT:Audience"];
+//string JwtSecurityKey = _configuration.GetValue<string>("JWT:SecretKey");
+string JwtSecurityKey = _configuration["JWT:SecretKey"];
 
 //Register JWT as a service
 //Adding an authentication service

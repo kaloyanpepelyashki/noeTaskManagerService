@@ -16,10 +16,14 @@ namespace noeTaskManagerService.DAO
             try
             {
 
-                _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddEnvironmentVariables().Build();
-                _connectionString = _configuration.GetValue<string>("MongoDB:DBConnectionString");
+                _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).AddEnvironmentVariables().Build();
+                _connectionString = _configuration["MongoDB:DBConnectionString"];
+
+                
 
                 client = new MongoClient(_connectionString);
+
+                Console.WriteLine($"testConnectionString: {_connectionString}");
 
             } catch(Exception e)
             {
