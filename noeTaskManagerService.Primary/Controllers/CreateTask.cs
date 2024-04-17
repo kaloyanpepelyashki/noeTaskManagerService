@@ -6,7 +6,6 @@ using noeTaskManagerService.Models;
 
 namespace noeTaskManagerService.Controllers
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class CreateTask : ControllerBase
@@ -18,6 +17,7 @@ namespace noeTaskManagerService.Controllers
             _tasksService = TasksService.GetInstance();
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateTasksRequest newTask)
         {

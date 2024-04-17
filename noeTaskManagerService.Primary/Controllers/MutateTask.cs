@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace noeTaskManagerService.Controllers
 {
-    [AllowAnonymous]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MutateTask : ControllerBase

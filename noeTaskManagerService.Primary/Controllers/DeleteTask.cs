@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using noeTaskManagerService.Services;
 using noeTaskManagerService.Services.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace noeTaskManagerService.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class DeleteTask : Controller
     {
         private readonly ITasksService _tasksService;
@@ -14,6 +17,7 @@ namespace noeTaskManagerService.Controllers
             _tasksService = TasksService.GetInstance();
         }
 
+        [Authorize]
         [HttpDelete("deleteByKey/{taskKey}")]
         public async Task<IActionResult> DeleteATask(string taskKey)
         {
