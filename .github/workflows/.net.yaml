@@ -41,6 +41,7 @@ jobs:
 
       - name: Build
         run: dotnet build --no-restore -c Release
+        working-directory: noeTaskManagerService.Primary
 
       - name: Test
         run: dotnet test --no-build -c Release
