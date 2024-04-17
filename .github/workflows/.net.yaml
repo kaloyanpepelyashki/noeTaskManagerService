@@ -45,6 +45,7 @@ jobs:
 
       - name: Test
         run: dotnet test --no-build -c Release
+        working-directory: noeTaskManagerService.Primary
 
       - name: Deploy to Render
         run: curl -X POST -d '{}' YOUR_RENDER_DEPLOY_HOOK_URL
