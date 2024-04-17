@@ -37,6 +37,7 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: noeTaskManagerService.Primary
 
       - name: Build
         run: dotnet build --no-restore -c Release
