@@ -63,4 +63,4 @@ jobs:
 
       - name: Cleanup
         if: always()
-        run: docker rmi ${{secrets.DOCKER_USERNAME}}/noetaskmanager-service:latest"}
+        run: docker rmi ${{secrets.DOCKER_USERNAME}}/noetaskmanager-service:latest
