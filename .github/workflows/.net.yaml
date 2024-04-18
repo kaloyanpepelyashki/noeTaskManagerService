@@ -25,7 +25,8 @@ jobs:
       - name: Test
         run: dotnet test --no-build --verbosity normal
 
-  build-and-push-to-render:
+  build_and_deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -35,25 +36,30 @@ jobs:
         with:
           dotnet-version: "8.0.x"
 
-      - name: Restore dependencies
-        run: dotnet restore
-        working-directory: noeTaskManagerService.Primary
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: Build
-        run: dotnet build --no-restore -c Release
-        working-directory: noeTaskManagerService.Primary
+      - name: Log in to Docker hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
 
-      - name: Test
-        run: dotnet test --no-build -c Release
-        working-directory: noeTaskManagerService.Primary
-        env:
-          MongoDB:DBConnectionString: ${{secrets.MONGO_DB_CONNECTION_STRING}}
-          JWT:Issuer: ${{secrets.JWT_ISSUER}}
-          JWT:Audience: ${{secrets.JWT_AUDIENCE}}
-          JWT:SecretKey: ${{secrets.JWT_SECRET_KEY}}
+      - name: Build and push Docker image to Docker hub
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{secrets.DOCKER_USERNAME}}/noetaskmanager-service:latest
 
-      - name: Deploy to Render
-        if: github.ref == 'refs/heads/main'
-        env:
-          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
-        run: curl "$RENDER_DEPLOY_HOOK_URL"
+      - name: Depoloy to Render
+        run: |
+          curl -X PATCH \
+            https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }} \
+            -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{"image": "${{secrets.DOCKER_USERNAME}}/noetaskmanager-service:latest"}'
+
+      - name: Cleanup
+        if: always()
+        run: docker rmi yourdockerhubusername/yourappname:latest
