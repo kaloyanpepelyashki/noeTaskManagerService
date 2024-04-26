@@ -16,7 +16,7 @@ namespace noeTaskManagerService.Services
 
         public JWTGenerator() 
         {
-            _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddEnvironmentVariables().Build();
+            _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).AddEnvironmentVariables().Build();
             JwtIssuer = _configuration.GetValue<string>("JWT:Issuer");
             JwtAudience = _configuration.GetValue<string>("JWT:Audience");
             JwtSecurityKey = _configuration.GetValue<string>("JWT:SecretKey");
